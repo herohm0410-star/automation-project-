@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.automation.scheduler</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/hmgimhongmu/automation-project/scheduler.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/hmgimhongmu/automation-project</string>
+
+    <!-- Start automatically when you log in -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Restart if it crashes -->
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- Log output -->
+    <key>StandardOutPath</key>
+    <string>/Users/hmgimhongmu/automation-project/shared/logs/scheduler.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/hmgimhongmu/automation-project/shared/logs/scheduler_error.log</string>
+
+    <!-- Load env vars (add your real values here or use secrets.py) -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>SCHEDULE_SPORTS</key>
+        <string>09:00</string>
+        <key>SCHEDULE_MACD</key>
+        <string>08:00</string>
+        <key>SCHEDULE_ETSY</key>
+        <string>10:00</string>
+    </dict>
+</dict>
+</plist>
