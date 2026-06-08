@@ -29,6 +29,11 @@ SYSTEM_PROMPT = (
     "Be concise and direct."
 )
 
+if not os.environ.get("TELEGRAM_BOT_TOKEN"):
+    os.environ["TELEGRAM_BOT_TOKEN"] = input("텔레그램 봇 토큰을 붙여넣으세요: ").strip()
+if not os.environ.get("OPENAI_API_KEY"):
+    os.environ["OPENAI_API_KEY"] = input("OpenAI 키를 붙여넣으세요: ").strip()
+
 openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
 
