@@ -56,6 +56,12 @@ os.environ["ETSY_ACCESS_TOKEN"] = ""
 os.environ["TELEGRAM_BOT_TOKEN"] = ""
 os.environ["TELEGRAM_CHAT_ID"]   = ""
 
+# ─── Hermes (Telegram assistant bot) ───────────────────────────────────────────
+# OpenAI API key — https://platform.openai.com/api-keys
+# Reuses TELEGRAM_BOT_TOKEN above as the bot's connection.
+os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_MODEL"]   = "gpt-4o-mini"   # any chat-completions-capable model
+
 # Optional: email for alerts (not yet wired — placeholder for future use)
 os.environ["NOTIFICATION_EMAIL"] = ""
 

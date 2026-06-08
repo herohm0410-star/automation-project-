@@ -2,3 +2,5 @@ requests
 pandas
 ccxt
 apscheduler
+python-telegram-bot
+openai
