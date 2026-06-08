@@ -4,3 +4,5 @@ ccxt
 apscheduler
 python-telegram-bot
 openai
+anyio<4
+httpx<0.28
